@@ -1,0 +1,8 @@
+{ % 'stuff/base.html' %}
+{ % block content %}
+ <form method='post' action="{% url 'delete_movie' %}">
+                {% csrf_token %}
+     <button type="submit" class='btn btn-danger-sm'>Delete</button>
+ </form>
+{% endblock %}
+

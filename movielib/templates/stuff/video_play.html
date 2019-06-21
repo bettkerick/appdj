@@ -1,0 +1,31 @@
+{% extends 'stuff/base.html' %}
+
+
+{% block content %}
+ <tr>
+    <thead><br><p></p>
+        <td><button type="button" ><a href="/movielib/{{movie.id}}/delete/">Delete</a></button></td>
+        <td><button type="button" ><a href="/movielib/{{movie.id}}/edit/">Edit Movie</a></button></td>
+        <td><button type="button" ><a href="/movielib/">Home</a></button></td><br><p></p>
+
+
+    </thead>
+ </tr>
+<table>
+
+    </tr>
+    <tr>
+        <td>
+            <video src="{{movie.Video.url}}" style="width:250px; height:350px" >
+
+      </video></td>
+        <td>
+
+<video src="{{movie.Video.url}}" style="width:600px; height:300px" controls onclick="this.paused ? this.play() : this.pause();"></video>
+</td>
+
+
+
+</tr>
+</table>
+{% endblock %}

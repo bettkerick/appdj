@@ -1,0 +1,54 @@
+
+{% extends 'stuff/base.html' %}
+
+
+{% block content %}
+
+<button type="button" ><a href="/movielib/AddNewMovie/">Add New</a></button>
+
+
+
+<table class="table">
+
+    <thead>
+    <tr>
+    <th>Movie</th><br>
+        <th>Name</th><br>
+    <th>Type</th><br>
+    <th>Client</th><br>
+    <th>Project Manager</th>
+    <th>Created Date</th>
+    <th>Modified Date</th>
+        <th>Edit</th>
+  </tr>
+    </thead>
+    <tbody>
+  <tr>
+      <form>
+                {{form.as_p}}
+
+      </form>
+      {% for mov in movie %}
+      <td>
+          <a href="/movielib/{{mov.id}}/video/">
+          <video src="{{mov.Video.url}}" style="width:130px; height:120px" >
+
+      </video>
+          </a>
+      </td>
+      <td>{{mov.Name}}</td>
+      <td>{{mov.Type}}</td>
+      <td>{{mov.Client}}</td>
+      <td>{{mov.Project_Manager}}</td>
+      <td>{{mov.Creation_Date}}</td>
+      <td>{{mov.ModifiedD}}</td>
+      <td><button type="button" class="btn btn-default" ><a href="/movielib/{{mov.id}}/edit/">Edit Movie</a></button></td>
+  </tr>
+      </tbody>
+{% endfor %}
+</table>
+{% endblock %}
+
+
+
+

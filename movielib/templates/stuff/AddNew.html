@@ -1,0 +1,25 @@
+
+
+{% extends 'stuff/base.html' %}
+
+
+{% block content %}
+ <h2> Add New Movie </h2>
+  <form method="post" enctype="multipart/form-data">
+  	{% csrf_token %}
+     {{ form.as_ul }}
+  	<button type="submit" class="btn btn-primary">Upload your Movie</button>
+  </form>
+</form>
+
+{% endblock %}
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,18 @@
+{% extends 'stuff/base.html' %}
+
+
+{% block content %}
+
+<h1>Update the Edit Movie</h1>
+<form enctype="multipart/form-data" method="POST">
+{% csrf_token %}
+{{ form.as_p }}
+<input type="submit" value="Upload"/>
+</form>
+
+<br><br>
+
+<br><br>
+</p>
+
+{% endblock %}
